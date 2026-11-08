@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results | EPAM</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="logo">
+            <a href="/" class="brand-link">EPAM</a>
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/about" class="nav-link">About</a></li>
+                <li><a href="/services" class="nav-link">Services</a></li>
+                <li><a href="/search?q=automation" class="nav-link active">Search</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="search-section">
+            <h1 class="page-title">Search EPAM</h1>
+            <form action="/search" method="GET" class="search-form">
+                <input type="text" name="q" id="search-input" placeholder="Search insights, careers, solutions..." class="search-input" value="automation">
+                <button type="submit" id="search-submit" class="search-button">Search</button>
+            </form>
+        </section>
+
+        <section class="results-section">
+            <h2 id="results-heading">Search Results</h2>
+            <div id="results-container" class="results-list">
+                <article class="search-card">
+                    <h3><a href="/services" class="search-result-link">Quality Engineering and Test Automation Services</a></h3>
+                    <p>Learn how EPAM implements enterprise-grade automated testing with WebdriverIO and modern CI/CD.</p>
+                </article>
+                <article class="search-card">
+                    <h3><a href="/services" class="search-result-link">Intelligent Robotic Process Automation</a></h3>
+                    <p>Drive operational efficiency across enterprise workflows using AI-assisted automation pipelines.</p>
+                </article>
+                <article class="search-card">
+                    <h3><a href="/about" class="search-result-link">Software Engineering Excellence and Automation Heritage</a></h3>
+                    <p>Over three decades of engineering innovation, open source contributions, and automated delivery.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 EPAM Systems. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/company/epam-systems/" target="_blank" rel="noopener noreferrer" class="social-link linkedin">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const query = params.get('q');
+        if (query) {
+            document.getElementById('search-input').value = query;
+            document.getElementById('results-heading').innerText = `Search Results for "${query}"`;
+        }
+    </script>
+</body>
+</html>
+

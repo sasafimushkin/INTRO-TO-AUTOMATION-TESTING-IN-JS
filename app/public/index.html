@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPAM | Software Engineering &amp; Product Development</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="logo">
+            <a href="/" class="brand-link">EPAM</a>
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="/" class="nav-link active">Home</a></li>
+                <li><a href="/about" class="nav-link">About</a></li>
+                <li><a href="/services" class="nav-link">Services</a></li>
+                <li><a href="/search?q=automation" class="nav-link">Search</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="hero-section">
+            <h1 class="hero-title">Engineering the Future Today</h1>
+            <p class="hero-subtitle">We partner with ambitious brands to design, build, and scale world-class software solutions.</p>
+            <a href="/services" class="cta-button">Explore Services</a>
+        </section>
+
+        <section class="features-section">
+            <div class="feature-card">
+                <h3>Consulting</h3>
+                <p>Strategic insights and modern architecture design.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Engineering</h3>
+                <p>Enterprise-scale cloud, platform, and product development.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Quality Engineering</h3>
+                <p>Robust test automation and continuous delivery practices.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 EPAM Systems. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/company/epam-systems/" target="_blank" rel="noopener noreferrer" class="social-link linkedin">LinkedIn</a>
+                <a href="https://twitter.com/EPAMSYSTEMS" target="_blank" rel="noopener noreferrer" class="social-link twitter">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Consent Banner -->
+    <div id="onetrust-consent-sdk" class="cookie-banner">
+        <div class="cookie-banner-content">
+            <p>We use cookies to improve your browsing experience and personalize content.</p>
+            <div class="cookie-buttons">
+                <button id="onetrust-accept-btn-handler" class="cookie-btn accept-btn">Accept</button>
+                <button id="onetrust-reject-all-handler" class="cookie-btn reject-btn">Decline</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('onetrust-accept-btn-handler').addEventListener('click', function () {
+            document.getElementById('onetrust-consent-sdk').style.display = 'none';
+        });
+        document.getElementById('onetrust-reject-all-handler').addEventListener('click', function () {
+            document.getElementById('onetrust-consent-sdk').style.display = 'none';
+        });
+    </script>
+</body>
+</html>
+
