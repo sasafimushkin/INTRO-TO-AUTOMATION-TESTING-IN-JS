@@ -78,3 +78,4 @@ The framework automatically captures the browser state and writes the artifact:
 - **Screenshots on Failure:** `docs/screenshots-on-failure/`
 - **Configuration File:** `wdio.conf.js`
 - **Test Suites:** `test/specs/`
+
