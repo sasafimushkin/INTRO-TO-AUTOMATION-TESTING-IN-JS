@@ -1,8 +1,11 @@
-reports/
+
 node_modules/
+.env
+.env.*
+!.env.example
 allure-results/
 allure-report/
+reports/
 screenshots/
-*.log
 .DS_Store
-
+*-submission.zip

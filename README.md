@@ -1,8 +1,34 @@
 # EPAM UI Test Automation Framework (WebdriverIO)
 
-> Practical Task 3: Test Automation Fundamentals & Execution
+> **PRACTICAL TASK 3: WEBDRIVERIO — Test Automation Fundamentals & Execution**
 
-This repository contains an end-to-end UI test automation framework built from scratch using **WebdriverIO (v9)**, **Mocha**, and **Allure Reporter**. It features cross-browser execution on **Google Chrome** and **Mozilla Firefox**, automatic screenshot capture on test failure, and comprehensive test reporting.
+This repository contains an end-to-end UI test automation framework built **from scratch** using **WebdriverIO (v9)**, **Mocha**, and **Allure Reporter**. It features cross-browser execution on **Google Chrome** and **Mozilla Firefox**, automatic screenshot capture on test failure, and comprehensive test reporting.
+
+---
+
+## ✅ Task Requirements Checklist
+
+| # | Task Condition | Status | Details |
+|---|---|---|---|
+| 1 | **Create a New Branch** named `ui_tests` | ✅ Done | Branch `ui_tests` created from `main` |
+| 2 | **Select a Framework**: Initialize and use WebdriverIO | ✅ Done | WebdriverIO v9.33.1 + Mocha BDD |
+| 3 | **Project Configuration**: Initialize from scratch, use epam.com or own app | ✅ Done | Local app modeling EPAM structure (4 pages). Supports `BASE_URL=https://www.epam.com` |
+| 4 | **Write Test Scenarios**: Minimum 5 scenarios, at least 3 webpages, diverse locators (CSS, XPath, etc.) | ✅ Done | **7 scenarios** across **4 web pages** using ID, CSS Attribute, Partial Link Text, XPath, Form selectors |
+| 5 | **Cross-Browser Testing**: Execute on Chrome and Firefox | ✅ Done | Both Chrome and Firefox configured and verified (10/10 passed) |
+| 6 | **Error Handling**: Auto-capture screenshots for failed tests | ✅ Done | `afterTest` hook in `wdio.conf.js` saves timestamped `.png` to `./screenshots/` |
+| 7 | **Reporting**: Configure a test reporter (spec or Allure) | ✅ Done | Spec Reporter (console) + Allure Reporter + HTML Report Generator |
+| 8 | **Milestone Deliverable**: Prepare and submit Merge Request | ✅ Done | `MERGE_REQUEST.md` with attached report and screenshots |
+
+### Acceptance Criteria Verification
+
+| Acceptance Criterion | Status |
+|---|---|
+| A new project is correctly set up from scratch using WebdriverIO | ✅ Verified |
+| At least 5 test scenarios are created, each utilizing a diverse locator strategy (CSS, XPath, etc.) | ✅ 7 scenarios with ID, CSS, XPath, Partial Link Text, Chained selectors |
+| Successful execution of test scenarios on both Chrome and Firefox | ✅ 10/10 spec files passed (5 Chrome + 5 Firefox) |
+| Configuration includes automatic screenshot capture for any failed tests | ✅ `afterTest` hook captures screenshots; verified via `npm run test:demo-fail` |
+| Detailed Test Result Reports are generated successfully | ✅ Spec Reporter + Allure + HTML report in `docs/reports/` |
+| Merge request to main branch with attached Test result report and Screenshots-on-failure is provided | ✅ `MERGE_REQUEST.md` + `docs/reports/` + `docs/screenshots-on-failure/` |
 
 ---
 
