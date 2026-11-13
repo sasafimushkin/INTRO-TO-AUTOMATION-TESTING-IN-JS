@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "UI test automation framework for epam.com built with WebdriverIO",
   "type": "module",
+  "author": "Oleksandr Fimushkin",
   "scripts": {
     "test": "wdio run ./wdio.conf.js",
     "test:chrome": "cross-env BROWSERS=chrome wdio run ./wdio.conf.js",
