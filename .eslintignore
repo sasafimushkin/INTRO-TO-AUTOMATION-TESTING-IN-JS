@@ -1,0 +1,7 @@
+node_modules/
+mochawesome-report/
+coverage/
+reports/
+allure-results/
+allure-report/
+docs/
