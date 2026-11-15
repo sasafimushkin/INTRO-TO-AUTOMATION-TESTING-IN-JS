@@ -183,11 +183,8 @@ npm run report:open      # Opens the generated report in your browser
 
 ---
 
-## Deliverables & Merge Request
+## Deliverables
 
-- **Branch**: `ui_tests`
+- **Branch**: `UNI_TESTING_FRAMEWORK`
 - **Target Branch**: `main`
-- **Merge Request Details**: See [MERGE_REQUEST.md](./MERGE_REQUEST.md)
-- **Attached Artifacts**:
-  - `docs/reports/test-result-report.html`
-  - `docs/screenshots-on-failure/chrome_should_fail_on_purpose_and_save_a_screenshot_*.png`
+
