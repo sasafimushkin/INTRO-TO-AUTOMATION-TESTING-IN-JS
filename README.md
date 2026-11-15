@@ -1,6 +1,6 @@
 # EPAM UI Test Automation Framework (WebdriverIO)
 
-> **PRACTICAL TASK 3: WEBDRIVERIO — Test Automation Fundamentals & Execution**
+>  **PRACTICAL TASK 1: INTRO TO AUTOMATION TESTING IN JS**
 
 This repository contains an end-to-end UI test automation framework built **from scratch** using **WebdriverIO (v9)**, **Mocha**, and **Allure Reporter**. It features cross-browser execution on **Google Chrome** and **Mozilla Firefox**, automatic screenshot capture on test failure, and comprehensive test reporting.
 
@@ -84,7 +84,7 @@ wdio-epam-ui-tests/
 
 ## Application Under Test
 
-Per Task Condition 3 (*"Use https://www.epam.com (or your own application) as the application under test"*):
+Per Task Condition  (*"Use https://www.epam.com (or your own application) as the application under test"*):
 - Public `epam.com` utilizes Cloudflare Turnstile anti-bot security which returns HTTP 403 / captcha challenges to automated browsers.
 - To ensure 100% reliable execution in automated pipelines, this repository includes a dedicated local web application mirroring EPAM's website structure (`Home`, `About`, `Services`, `Search`).
 - The local server is automatically booted by `wdio.conf.js` in `onPrepare` and gracefully terminated in `onComplete`.
@@ -209,11 +209,8 @@ npm run report:open      # Opens the generated report in your browser
 
 ---
 
-## Deliverables & Merge Request
+## Deliverables
 
 - **Branch**: `ui_tests`
 - **Target Branch**: `main`
-- **Merge Request Details**: See [MERGE_REQUEST.md](./MERGE_REQUEST.md)
-- **Attached Artifacts**:
-  - `docs/reports/test-result-report.html`
-  - `docs/screenshots-on-failure/chrome_should_fail_on_purpose_and_save_a_screenshot_*.png`
+
