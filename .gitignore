@@ -5,4 +5,5 @@ allure-report/
 screenshots/
 *.log
 .DS_Store
-
+coverage/
+mochawesome-report/
