@@ -28,9 +28,11 @@ describe('NumbersValidator Unit Tests', () => {
       expect(() => validator.isNumberEven('4')).to.throw(
         '[4] is not of type "Number" it is of type "string"',
       );
+
       expect(() => validator.isNumberEven(null)).to.throw(
         '[null] is not of type "Number" it is of type "object"',
       );
+
       expect(() => validator.isNumberEven(undefined)).to.throw(
         '[undefined] is not of type "Number" it is of type "undefined"',
       );
@@ -52,6 +54,7 @@ describe('NumbersValidator Unit Tests', () => {
       expect(() => validator.isAllNumbers('not an array')).to.throw(
         '[not an array] is not an array',
       );
+
       expect(() => validator.isAllNumbers(123)).to.throw(
         '[123] is not an array',
       );
@@ -60,19 +63,33 @@ describe('NumbersValidator Unit Tests', () => {
 
   describe('getEvenNumbersFromArray', () => {
     it('should return only even numbers from an array of numbers', () => {
-      expect(validator.getEvenNumbersFromArray([1, 2, 3, 4, 5, 6])).to.deep.equal([2, 4, 6]);
-      expect(validator.getEvenNumbersFromArray([1, 3, 5])).to.deep.equal([]);
-      expect(validator.getEvenNumbersFromArray([2, 4, 8])).to.deep.equal([2, 4, 8]);
+      expect(
+        validator.getEvenNumbersFromArray([1, 2, 3, 4, 5, 6]),
+      ).to.deep.equal([2, 4, 6]);
+
+      expect(
+        validator.getEvenNumbersFromArray([1, 3, 5]),
+      ).to.deep.equal([]);
+
+      expect(
+        validator.getEvenNumbersFromArray([2, 4, 8]),
+      ).to.deep.equal([2, 4, 8]);
+
+      expect(
+        validator.getEvenNumbersFromArray([]),
+      ).to.deep.equal([]);
     });
 
     it('should throw an error if input is not an array', () => {
       expect(() => validator.getEvenNumbersFromArray('hello')).to.throw(
-        '[hello] is not an array',
+        '[hello] is not an array of "Numbers"',
       );
     });
 
     it('should throw an error if array contains non-number elements', () => {
-      expect(() => validator.getEvenNumbersFromArray([1, 2, 'three', 4])).to.throw(
+      expect(
+        () => validator.getEvenNumbersFromArray([1, 2, 'three', 4]),
+      ).to.throw(
         '[1,2,three,4] is not an array of "Numbers"',
       );
     });
@@ -92,10 +109,15 @@ describe('NumbersValidator Unit Tests', () => {
 
     it('should throw an error if passed value is not a number', () => {
       expect(() => validator.isInteger('10')).to.throw(
-        '[10] is not of type "Number" it is of type "string"',
+        '[10] is not a number',
       );
+
       expect(() => validator.isInteger({})).to.throw(
-        '[[object Object]] is not of type "Number" it is of type "object"',
+        '[[object Object]] is not a number',
+      );
+
+      expect(() => validator.isInteger(null)).to.throw(
+        '[null] is not a number',
       );
     });
   });

@@ -8,49 +8,53 @@ class NumbersValidator {
    * @return {boolean}
    */
   isNumberEven(number) {
-    if (typeof number !== 'number') {
-      throw new Error(`[${number}] is not of type "Number" it is of type "${typeof number}"`);
+    const typeOfVariable = typeof number;
+
+    if (typeOfVariable !== 'number') {
+      throw new Error(`[${number}] is not of type "Number" it is of type "${typeOfVariable}"`);
     }
+
     return number % 2 === 0;
   }
 
   /**
    * Filters an array and returns only even numbers.
-   * @param {Array<number>} numbersArray
+   * @param {Array<number>} arrayOfNumbers
    * @return {Array<number>}
    */
-  getEvenNumbersFromArray(numbersArray) {
-    if (!Array.isArray(numbersArray)) {
-      throw new Error(`[${numbersArray}] is not an array`);
+  getEvenNumbersFromArray(arrayOfNumbers) {
+    if (Array.isArray(arrayOfNumbers)
+      && arrayOfNumbers.every(item => typeof item === 'number')) {
+      return arrayOfNumbers.filter(this.isNumberEven);
     }
-    if (!this.isAllNumbers(numbersArray)) {
-      throw new Error(`[${numbersArray}] is not an array of "Numbers"`);
-    }
-    return numbersArray.filter((num) => this.isNumberEven(num));
+
+    throw new Error(`[${arrayOfNumbers}] is not an array of "Numbers"`);
   }
 
   /**
    * Checks if all elements in an array are numbers.
-   * @param {Array<number>} numbersArray
+   * @param {Array<number>} arrayOfNumbers
    * @return {boolean}
    */
-  isAllNumbers(numbersArray) {
-    if (!Array.isArray(numbersArray)) {
-      throw new Error(`[${numbersArray}] is not an array`);
+  isAllNumbers(arrayOfNumbers) {
+    if (!Array.isArray(arrayOfNumbers)) {
+      throw new Error(`[${arrayOfNumbers}] is not an array`);
     }
-    return numbersArray.every((num) => typeof num === 'number');
+
+    return arrayOfNumbers.every(n => typeof n === 'number');
   }
 
   /**
    * Checks if a number is an integer.
-   * @param {number} number
+   * @param {number} n
    * @return {boolean}
    */
-  isInteger(number) {
-    if (typeof number !== 'number') {
-      throw new Error(`[${number}] is not of type "Number" it is of type "${typeof number}"`);
+  isInteger(n) {
+    if (typeof n !== 'number') {
+      throw new Error(`[${n}] is not a number`);
     }
-    return Number.isInteger(number);
+
+    return Number.isInteger(n);
   }
 }
 
